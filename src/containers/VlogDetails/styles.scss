@@ -1,0 +1,62 @@
+.container {
+    overflow: visible;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &.disabled {
+        opacity: 0.2;
+    }
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    color: $grey;
+
+    &::placeholder {
+        color: $grey;
+    }
+}
+
+.delete {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 25px;
+}
+
+.selector {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px;
+    border: 1px solid $border;
+
+    > * {
+        flex-grow: 1;
+        padding: 5px;
+        background: $pink;
+        text-transform: capitalize;
+        color: black;
+        transition: color 0.2s, background 0.2s;
+
+        &.active {
+            background: $purple;
+            color: white;
+        }
+    }
+}
+
+.warning {
+    text-align: center;
+}

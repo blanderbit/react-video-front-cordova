@@ -1,0 +1,88 @@
+.fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.next {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    background: $pink;
+    transition: background 0.2s, box-shadow 0.2s;
+
+    &.active {
+        background: $purple;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    }
+}
+
+.item {
+    box-sizing: border-box;
+    border-bottom: 1px solid $border;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.field {
+    @extend .item;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    padding: 10px;
+    background: white;
+
+    .addButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: right;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        background: $purple;
+    
+        .icon {
+            color: white;
+        }
+    
+        &.disabled {
+            background: $pink;
+        }
+    }
+
+    .name {
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow: hidden;
+        padding: 5px;
+    }
+}
+
+.fieldContent {
+    @extend .item;
+    background: #efefef;
+}
+
+.swipeAction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.icon,
+.uploadButton {
+    flex-shrink: 0;
+}

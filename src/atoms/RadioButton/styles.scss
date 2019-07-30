@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .check {
+        display: flex;
+        align-items: center;
+        color: $purple;
+        text-align: center;
+        font-size: 20px;
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+}
+

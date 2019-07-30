@@ -1,0 +1,153 @@
+.container {
+    background: white;
+
+    .searchButton {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        color: $purple;
+        font-size: 27px;
+    }
+
+    .search {
+        position: fixed;
+        width: 0;
+        height: 50px;
+        top: 0;
+        right: 0;
+        background: black;
+        pointer-events: none;
+        transition: width 0.2s, border 0.2s;
+        border: none;
+        box-sizing: border-box;
+    
+        &.active {
+            width: 100vw;
+            border: $border solid 1px;
+        }
+    }
+}
+
+.carousels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    background: #f9f9f9;
+    padding-top: 10px;
+
+    &.noRender {
+        display: none;
+    }
+}
+
+.carousel {
+    margin-bottom: 10px;
+}
+
+.title {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    color: $white;
+    text-shadow: 0 1px 0 black;
+}
+
+.duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    color: $white;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.3);
+    text-shadow: 0 1px 0 black;
+}
+
+.highlight {
+    width: 75vh;
+    max-width: 100%;
+    max-height: 75vh;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 300px;
+    height: 170px;
+    margin-right: 10px;
+    border: 1px solid $border;
+    border-radius: 5px;
+
+    .gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 170px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 5e-05) 17.77%, rgba(0, 0, 0, 0.35) 74.79%);
+        border-radius: 5px;
+    }
+}
+
+.thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hint {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 60px;
+    color: $grey;
+
+
+    .arrow {
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.owner {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.empty {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}

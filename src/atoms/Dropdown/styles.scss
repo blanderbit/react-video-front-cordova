@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.options {
+    width: 100%;
+    opacity: 1;
+    max-height: 200px;
+    transition: opacity 0.2s, max-height 0.2s;
+    overflow-y: auto;
+    &.closed {
+        opacity: 0;
+        max-height: 0;
+    }
+
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+

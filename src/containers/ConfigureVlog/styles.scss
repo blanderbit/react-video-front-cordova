@@ -1,0 +1,142 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    .filterPreview {
+        max-width: 75px;
+        max-height: 75px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .filterName {
+        color: $grey;
+    }
+
+    &.active {
+        border: $purple 5px solid;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .icon {
+        color: $purple;
+        height: 30px;
+        width: 30px;
+        font-size: 30px;
+        margin-right: 15px;
+    }
+
+    .optionBody {
+        .optionDesc {
+            color: $text-grey;
+        }
+    }
+}
+
+.spacedRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.renderSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.renderButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: $pink;
+    color: $white;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 3px;
+    pointer-events: none;
+    max-width: 100px;
+    transition: max-width 0.2s;
+
+    .icon {
+        margin-left: 10px;
+    }
+
+    &.active {
+        background: $purple;
+        pointer-events: all;
+    }
+
+    &.invisible {
+        width: 0;
+        padding: 0;
+    }
+
+    &:nth-child(2) {
+        justify-content: center;
+    }
+
+}
+
+.finalize {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        width: 50px;
+        padding: 15px;
+        border-radius: 3px;
+        background: $purple;
+        pointer-events: all;
+        font-weight: bold;
+    
+        &.disabled {
+            background: $pink;
+            pointer-events: none;
+        }
+    
+    }
+}
+
+.carousel {
+    visibility: hidden;
+        &.active {
+        visibility: visible;
+    }
+}
+
+.grey {
+    color: $grey;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}

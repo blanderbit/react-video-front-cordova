@@ -1,0 +1,83 @@
+.option {
+    margin: 5px 0;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.fades {
+    border-radius: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid $border;
+}
+
+.fade {
+    border-bottom: 1px solid $border;
+    padding: 5px;
+    background: $white;
+    transition: background 0.2s;
+    
+    .name {
+        font-weight: bold;
+    }
+
+    .desc {
+        font-size: 13px;
+        color: #848484;
+    }
+
+    &.active {
+        background: $pink;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.colorPicker {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid $border;
+    overflow: hidden;
+    .color {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        padding: 5px 0;
+        background: $background-modal;
+        transition: background 0.2s, color 0.2s;
+
+        &.black {
+
+            &.active {
+                background: black;
+                color: white;
+            }
+
+        }
+
+        &.white {
+
+            &.active {
+                background: white;
+                color: black;
+            }
+
+        }
+    }
+}
+
+.duration {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .input {
+        width: 50px;
+        margin: 0 15px;
+    }
+}

@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 70%;
+    border-radius: 20px;
+    background: $background-modal;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-top: 1px $grey solid;
+    flex-shrink: 0;
+
+    .action {
+        padding: 10px 0;
+        width: 50%;
+        text-align: center;
+        color: $purple;
+        transition: opacity 0.2s;
+
+        &:first-child {
+            border-right: 1px $grey solid;
+        }
+
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    }
+}
+
+.children {
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    height: 100%;
+}

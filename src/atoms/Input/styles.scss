@@ -1,0 +1,57 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+
+    &.modal {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+            margin: 10px 0;
+        }
+
+        .input {
+            padding: 5px;
+            border-radius: 2px;
+            box-sizing: border-box;
+            border: 1px $border solid;
+            color: black;
+        }
+    }
+
+    &.field {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        .label {
+            margin-right: 5px;
+        }
+
+        .input {
+            flex-grow: 1;
+            border: none;
+            padding: 0;
+            color: $text-grey;
+        }
+    }
+
+    &.auth {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .label {
+
+        }
+
+        .input {
+            background: none;
+            border: none;
+            border-bottom: 1px solid $border;
+        }
+    }
+}

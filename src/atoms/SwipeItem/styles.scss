@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    transition: width 0.2s;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: $pink;
+    overflow: hidden;
+    color: $purple;
+}

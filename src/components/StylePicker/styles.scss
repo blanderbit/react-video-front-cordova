@@ -1,0 +1,81 @@
+.style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: $white;
+    padding: 10px;
+    border: 1px solid $border;
+    border-top: none;
+
+    &.selected {
+        border-top: 1px solid $border;
+    }
+
+
+    .styleMeta {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .styleName, .fontName {
+        display: flex;
+        align-items: center;
+    }
+
+    .styleName {
+        display: block;
+        margin: auto 0;
+        margin-right: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100px;
+        text-overflow: ellipsis;
+    }
+
+    .fontName {
+        color: $grey;
+    }
+
+    .colorGroup {
+        display: flex;
+        flex-direction: row;
+        .color {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid $border;
+
+            &:first-child {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.prompt {
+    background: $white;
+}
+
+.label {
+    box-sizing: border-box;
+    background: $white;
+    width: 100%;
+    padding: 5px;
+    border: 1px $border solid;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    > * {
+        text-align: center;
+
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+
+}

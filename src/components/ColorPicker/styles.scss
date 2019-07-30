@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px $border solid;
+    padding: 5px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > * {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.collapser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px $border solid;
+    .icon {
+        color: $purple;
+    }
+}
+
+.colors {
+    display: flex;
+    flex-direction: column;
+}
+
+.colorRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px $border solid;
+    transition: border 0.2s;
+
+    &.active {
+        border: 3px $purple solid;
+    }
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+
+
+    &.active {
+        max-height: 100vh;
+        border-top: 1px $border solid;
+        margin-top: 5px;
+        padding: 5px;
+    }
+}
+
+.hex {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 65px;
+    border: none;
+    border-left: 1px $border solid;
+    padding-left: 5px;
+    outline: none;
+    transition: width 0.2s;
+
+    &.active {
+        width: 100%;
+    }
+}

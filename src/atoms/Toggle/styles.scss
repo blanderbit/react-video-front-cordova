@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    min-width: 40px;
+    height: 26px;
+    border-radius: 25px;
+    padding: 0 3px;
+    background: $grey;
+    transition: background 0.2s;
+    &.active {
+        background: $purple;
+    }
+}
+
+.ball {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    background: $white;
+    transition: transform 0.2s;
+    &.active {
+        transform: translateX(18px);
+        background: $white;
+    }
+}
+
+.desc {
+    color: $text-grey;
+}

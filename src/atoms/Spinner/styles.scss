@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.spinner {
+    animation: spin 1s infinite linear;
+    color: $purple;
+    font-size: 100px !important;
+}
+
+@keyframes spin {
+    100% {
+        transform:  rotate(360deg);
+    }
+}

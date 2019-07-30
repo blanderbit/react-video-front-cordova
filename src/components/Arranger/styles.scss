@@ -1,0 +1,93 @@
+.list {
+    margin-bottom: 100px;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-bottom: #F6F6F7 solid 1px;
+    background: white;
+    width: 100%;
+    overflow-x: auto;
+
+    &:first-child {
+        border-top: #F6F6F7 solid 1px;
+    }
+
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.bigIcon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin-right: 15px;
+}
+
+.duration {
+    margin-right: 5px;
+    &.strike {
+        text-decoration: line-through;
+    }
+}
+
+.fileMeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    height: 100%;
+    width: calc(100% - 160px);
+    padding: 15px 0;
+    box-sizing: border-box;
+
+    .fileName,
+    .fileProp {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .fileName {
+        color: $text;
+    }
+
+    .fileProp {
+        display: flex;
+        flex-direction: row;
+        color: $text-grey;
+    }
+}
+
+.handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 30px;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}

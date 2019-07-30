@@ -1,0 +1,96 @@
+.container {
+    z-index: 10;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    width: 100%;
+    height: $navbar-height;
+    background: $white;
+    border-top: #e8e8e8 solid 1px;
+    .route {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        color: $text-grey;
+        fill: $text-grey;
+        text-decoration: none;
+        transition: color 0.2s, border-bottom 0.2s;
+        border-bottom: $white solid 3px;
+        padding-top: 3px;
+        cursor: pointer;
+
+        &.active {
+            color: $purple;
+            fill: $purple;
+            border-bottom: $purple solid 3px;
+            background-color: #f4e4ef62;
+        }
+    }
+
+}
+
+.options {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+
+    .optionsGroup {
+        margin: 0 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: $white;
+
+        .optionsHeader,
+        .option {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border-bottom: 1px solid $border;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .optionsHeader {
+            color: $grey;
+        }
+
+        .option {
+            color: $text;
+        }
+    }
+}
+
+.routeName {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.icon {
+    margin-bottom: 5px;
+}
+
+.prof {
+    color: $purple;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+.modal {
+    height: fit-content;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+    color: $purple;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+}
+
+.title {
+    padding: 15px;
+    background: $background;
+    color: $text-grey;
+    border-bottom: $border solid 1px;
+}
+
+.content {
+    width: 100%;
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 0.2s, opacity 0.2s;
+
+    &.hidden {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+.element {
+    background: white;
+    border-bottom: $border solid 1px;
+    padding: 15px;
+    max-height: 1000px;
+    opacity: 1;
+}

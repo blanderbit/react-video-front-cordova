@@ -1,0 +1,190 @@
+.container {
+    overflow: visible;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+
+    > * {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .collapser {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px $border solid;
+        background: white;
+        margin-right: 5px;
+    
+    
+        .icon {
+            color: $purple;
+        }
+    }
+}
+
+.upload {
+    background: $pink;
+    color: $purple;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.subHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    color: $text;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.imagePreview {
+    width: 100%;
+}
+
+.asset {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+
+    .thumb {
+        height: 100%;
+    }
+
+    .check {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background: $purple;
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        &.active {
+            opacity: 1;
+        }
+
+        .icon {
+            color: $white;
+        }
+
+    }
+}
+
+
+
+.styleList {
+    display: flex;
+    flex-direction: column;
+}
+
+.style {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: $border solid 1px;
+    overflow-x: auto;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &.delete {
+        opacity: 0.3;
+    }
+}
+
+.styleGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    width: 50%;
+
+    > * {
+        width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-word;
+    }
+
+    .color {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        border: $border solid 1px;
+    }
+
+    &.header {
+        text-align: center;
+    }
+}
+
+.actionLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trash {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 25px;
+
+    &.active {
+        animation: wiggle 1s infinite;
+    }
+}
+
+.progressBar {
+    width: 100vw;
+    height: 0;
+    transition: height 0.8s;
+    opacity: 0;
+    pointer-events: none;
+    &.active {
+        height: 60px;
+        opacity: 1;
+        margin-bottom: 60px;
+        pointer-events: all;
+    }
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(10deg);}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(20deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(10deg);}
+  }

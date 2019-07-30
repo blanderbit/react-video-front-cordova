@@ -1,0 +1,192 @@
+
+
+.persona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $background;
+    padding-bottom: 25px;
+
+    .avatar {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 24px 0;
+        border-radius: 75px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .logoWrapper {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 35px;
+            height: 35px;
+            border-radius: 35px;
+            border: $background 5px solid;
+            background: $background;
+
+            .logo {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .fullName {
+        color: $text;
+        font-size: 20px;
+    }
+
+    .companyName {
+        color: $text-grey;
+        font-size: 16px;
+    }
+
+    .fullName,
+    .companyName {
+        font-weight: bold;
+        padding: 5px 0;
+    }
+}
+
+
+.fields {
+    background: $white;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .fieldRight {
+        color: $grey;
+    }
+
+}
+
+.assets {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px $border solid;
+    background: $white;
+    padding: 10px;
+
+}
+
+.assetsHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: $grey;
+    .upload {
+        background: $pink;
+        color: $purple;
+        padding: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+.asset {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 150px;    
+    height: 150px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+}
+
+.thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 5e-05) 25%, rgba(0, 0, 0, 0.4) 88.4%);
+}
+
+.assetTitle {
+    position: absolute;
+    color: $white;
+    width: 100%;
+}
+
+.assetList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modal {
+    height: fit-content;
+}
+
+.progressBar {
+    height: 0;
+    transition: height 0.8s;
+    opacity: 0;
+    &.active {
+        height: 50px;
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+}
+
+.icon {
+    color: $grey;
+}
+
+.googleLogin {
+    width: 100%;
+    background: white;
+    border: none;
+}
+
+.youtubeButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+}
+
+.youtube {
+    object-fit: contain;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.imageUpload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.link {
+    position: relative;
+    display: flex;
+
+    .linkButton {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        color: black;
+        font-size: 15px;
+        font-family: 'Open Sans';
+        padding: 0;
+        margin: 0;
+    }
+
+    .check {
+        position: absolute;
+        right: 0;
+        color: green;
+    }
+}

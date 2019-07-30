@@ -1,0 +1,15 @@
+{
+  "name": "VlogAhead",
+  "short_name": "VlogAhead",
+  "start_url": "/home",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Vloggity vlog.",
+  "icons": [
+    {
+      "src": "../favicons/icon-196x196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ]
+}

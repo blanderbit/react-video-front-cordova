@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add {
+    padding: 5px;
+    color: white;
+    background: $purple;
+    border-radius: 5px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.template {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: white;
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.element {
+    padding: 0;
+}
+
+.empty {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+}

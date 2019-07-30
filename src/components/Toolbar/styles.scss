@@ -1,0 +1,117 @@
+.container { 
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    .left,
+    .right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        transition: color 0.2s;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+
+    }
+
+    .left {
+        background: $pink;
+        color: $purple;
+    }
+
+    .right {
+        background: $purple;
+        color: $white;
+
+        &.disabled {
+            opacity: 0.2;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    bottom: 10px;
+    height: fit-content;
+    width: 100vw;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &.active {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .menuHeader {
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: #D1D1DF solid 1px;
+        color: #BCBCBC;
+    }
+
+    .menuClose {
+        width: calc(100vw - 20px);
+        background: #F0F0F0;
+        padding: 15px 0;
+        color: $text;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    }
+}
+
+.menuInner {
+    width: calc(100vw - 20px);
+    background: $white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.action {
+    width: 100%;
+    position: relative;
+    color: $text;
+    padding: 15px 0;
+    transition: color 0.1s;
+    border-bottom: #D1D1DF solid 1px;
+    text-align: center;
+
+    &:hover {
+        color: #C04C9F;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .actionIcon {
+        position: absolute;
+        left: 15px;
+        color: #CE6CB1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: none;
+    transition: background 0.2s;
+    &.active {
+        pointer-events: all;
+        background: rgba(#000000, 0.5);
+    }
+}

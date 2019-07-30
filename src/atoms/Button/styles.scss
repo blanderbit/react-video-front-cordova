@@ -1,0 +1,16 @@
+.container {
+    color: $purple;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 0;
+    text-align: center;
+    background: $pink;
+    border: 2px solid $pink;
+    border-radius: 8px;
+
+    &.active {
+        background: $grey;
+        color: $text-grey;
+    }
+}
+

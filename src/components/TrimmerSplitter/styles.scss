@@ -1,0 +1,38 @@
+.modeSelector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: fit-content;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    overflow: hidden;
+
+    > * {
+        text-align: center;
+        width: 50%;
+        padding: 5px;
+        color: $text;
+        transition: background 0.2s, color 0.2s;
+
+        &.active {
+            background: $purple;
+            color: white;
+        }
+    }
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: hidden;
+
+    > * {
+        flex-shrink: 0;
+    }
+}

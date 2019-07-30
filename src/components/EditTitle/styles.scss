@@ -1,0 +1,96 @@
+.example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 75px; 
+}
+
+.preset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .presetMeta {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .presetName, .fontName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .presetName {
+        margin-right: 5px;
+    }
+
+    .fontName {
+        color: $grey;
+    }
+
+    .colorGroup {
+        display: flex;
+        flex-direction: row;
+        .color {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid $border;
+
+            &:first-child {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+
+.stylePicker {
+    margin-bottom: 5px;
+}
+
+.textarea {
+    box-sizing: border-box;
+}
+
+.label {
+    margin: 5px 0;
+}
+
+.asset {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+
+    .thumb {
+        width: 80px;
+        height: 80px;
+    }
+
+    .meta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-width: calc(100% - 100px);
+        margin-left: 10px;
+
+        > * {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+.toggle {
+    margin-bottom: 5px;
+}

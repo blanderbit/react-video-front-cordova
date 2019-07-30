@@ -1,0 +1,28 @@
+.preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    width: 100%;
+    height: 100px;
+}
+
+.font {
+    background: $white;
+    padding: 10px;
+    border: 1px $border solid;
+    border-top: none;
+
+    &:first-child {
+        border-top: 1px $border solid;
+    }
+}
+
+.label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.colorPicker {
+    margin-top: 10px;
+}

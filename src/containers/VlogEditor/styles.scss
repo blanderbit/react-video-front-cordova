@@ -1,0 +1,127 @@
+.overlay {
+    margin: 50px;
+}
+
+.toolbar {
+    bottom: 24px;
+    left: 0;
+    width: 100%;
+}
+
+.header {
+    color: $text-grey;
+    margin: 20px;
+}
+
+.vidinput {
+    width: 100%;
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.progressBar {
+    width: 100vw;
+    height: 0;
+    transition: height 0.8s;
+    opacity: 0;
+    &.active {
+        height: 50px;
+        opacity: 1;
+        margin-bottom: 60px;
+    }
+}
+
+.backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 70vw;
+    max-width: 300px;
+    height: 50vh;
+    pointer-events: none;
+
+}
+
+.arrow {
+    position: fixed;
+    bottom: 80px;
+    left: 80px;
+    width: 65px;
+    height: 65px;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $grey;
+}
+
+.customToggle {
+    margin-left: 10px;
+}
+
+
+
+.modal {
+    height: fit-content;
+}
+
+.sync {
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .syncIcon {
+        font-size: 27px !important;
+        color: $purple;
+        opacity: 1;
+        transition: 0.2s; 
+
+        &.syncing {
+            animation: swoop 1s ease-in-out infinite;
+            opacity: 0.2;
+        }
+    }
+
+    .syncLabel {
+        font-size: 10px;
+        color: $grey;
+    }
+}
+
+.hamburger {
+    position: fixed;
+    color: $purple;
+    font-size: 27px !important;    
+    top: 10px;
+    right: 10px;
+}
+
+@keyframes swoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}

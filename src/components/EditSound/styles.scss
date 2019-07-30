@@ -1,0 +1,33 @@
+.modal {
+    height: fit-content !important;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.icon {
+    color: $grey;
+    font-size: 50px !important;
+    transition: color 0.2s;
+
+    &.active {
+        color: $purple;
+    }
+
+    &.disabled {
+        pointer-events: none;
+    }
+}
+
+.tinyIcon {
+    color: $purple;
+}
+
+.label {
+    margin-bottom: 10px;
+}
